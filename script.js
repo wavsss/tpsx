@@ -204,35 +204,7 @@ const memberToSNumber = {
     'jiseoyeon': 'S24'
 };
 
-// Official tripleS COSMO Colors
-const memberColors = {
-    'S1': '#22AEFF',
-    'S2': '#9200FF',
-    'S3': '#FFF800',
-    'S4': '#98F21D',
-    'S5': '#DB0C74',
-    'S6': '#FC83A4',
-    'S7': '#6799A0',
-    'S8': '#FFE3E2',
-    'S9': '#FFC935',
-    'S10': '#FF9AD6',
-    'S11': '#FFDE00',
-    'S12': '#5974FF',
-    'S13': '#FF953F',
-    'S14': '#1222B5',
-    'S15': '#D51313',
-    'S16': '#FE8E76',
-    'S17': '#AC62B7',
-    'S18': '#B7F54C',
-    'S19': '#52D9BB',
-    'S20': '#FF428A',
-    'S21': '#C7A3E0',
-    'S22': '#7BBA8D',
-    'S23': '#CFF3FF',
-    'S24': '#FFAB62',
-};
-
-// Member Photos
+// Member photos (Imgur URLs)
 const memberPhotos = {
     'S1': 'https://i.imgur.com/3p4dAiE.jpeg',
     'S2': 'https://i.imgur.com/p2Pxyce.jpeg',
@@ -257,7 +229,35 @@ const memberPhotos = {
     'S21': 'https://i.imgur.com/XNATAPl.jpeg',
     'S22': 'https://i.imgur.com/mhoEfSI.jpeg',
     'S23': 'https://i.imgur.com/eiRObhv.jpeg',
-    'S24': 'https://i.imgur.com/VL2Tsb5.jpeg',
+    'S24': 'https://i.imgur.com/VL2Tsb5.jpeg'
+};
+
+// Official COSMO Colors
+const memberColors = {
+    'S1': '#22AEFF',
+    'S2': '#9200FF',
+    'S3': '#FFF800',
+    'S4': '#98F21D',
+    'S5': '#DB0C74',
+    'S6': '#FC83A4',
+    'S7': '#6799A0',
+    'S8': '#FFE3E2',
+    'S9': '#FFC935',
+    'S10': '#FF9AD6',
+    'S11': '#FFDE00',
+    'S12': '#5974FF',
+    'S13': '#FF953F',
+    'S14': '#1222B5',
+    'S15': '#D51313',
+    'S16': '#FE8E76',
+    'S17': '#AC62B7',
+    'S18': '#B7F54C',
+    'S19': '#52D9BB',
+    'S20': '#FF428A',
+    'S21': '#C7A3E0',
+    'S22': '#7BBA8D',
+    'S23': '#CFF3FF',
+    'S24': '#FFAB62'
 };
 
 // Load fan sites on fansites.html page
@@ -270,19 +270,24 @@ if (window.location.pathname.includes('fansites.html')) {
             const memberName = memberNames[member];
             const sNumber = memberToSNumber[member];
             const fansites = membersData[sNumber];
+            const photoUrl = memberPhotos[sNumber];
             const memberColor = memberColors[sNumber];
-            const memberPhoto = memberPhotos[sNumber];
 
             // Update member header
             document.getElementById('memberName').textContent = memberName;
             document.getElementById('memberNumber').textContent = sNumber;
 
-            // Update member icon with photo and colored border
+            // Update member icon with PHOTO and COLOR
             const memberIcon = document.getElementById('memberIcon');
-            memberIcon.style.backgroundImage = `url('${memberPhoto}')`;
+
+            // Set background image and border color
+            memberIcon.style.backgroundImage = `url('${photoUrl}')`;
             memberIcon.style.backgroundSize = 'cover';
             memberIcon.style.backgroundPosition = 'center';
-            memberIcon.style.border = `6px solid ${memberColor}`;
+            memberIcon.style.border = `4px solid ${memberColor}`;
+
+            // Remove any text content (no initials needed)
+            memberIcon.innerHTML = '';
 
             // Display fan sites
             const fansitesList = document.getElementById('fansitesList');

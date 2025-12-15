@@ -180,7 +180,7 @@ header {
     border-bottom: 3px solid #f0f0f0;
 }
 
-/* Member Icon Large - With photo and colored border */
+/* Large Member Icon with Photo and Color */
 .member-icon-large {
     width: 200px;
     height: 200px;
@@ -190,15 +190,12 @@ header {
     align-items: center;
     justify-content: center;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
-    font-size: 3.5em;
-    font-weight: 700;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
+    /* Border color set via JavaScript */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Border is set dynamically via JavaScript with member's COSMO color */
+    overflow: hidden;
+    position: relative;
 }
 
 .member-header h1 {
@@ -385,7 +382,6 @@ footer p {
     .member-icon-large {
         width: 160px;
         height: 160px;
-        font-size: 2.8em;
     }
 
     .member-header h1 {
@@ -442,7 +438,6 @@ footer p {
     .member-icon-large {
         width: 140px;
         height: 140px;
-        font-size: 2.5em;
     }
 
     .member-header h1 {
