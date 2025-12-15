@@ -148,7 +148,7 @@ const membersData = {
     ],
 }
 
-// Member English names mapping
+// Member English names mapping - CORRECTED TYPO
 const memberNames = {
     'seoyeon': 'Yoon Seoyeon',
     'hyerin': 'Jeong Hyerin',
@@ -172,7 +172,7 @@ const memberNames = {
     'shion': 'Park Shion',
     'chaewon': 'Kim Chaewon',
     'sullin': 'Sullin',
-    'seoa': 'Seoa',
+    'seoah': 'Seoah',
     'jiseoyeon': 'Ji Seoyeon'
 };
 
@@ -200,7 +200,7 @@ const memberToSNumber = {
     'shion': 'S20',
     'chaewon': 'S21',
     'sullin': 'S22',
-    'seoa': 'S23',
+    'seoah': 'S23',
     'jiseoyeon': 'S24'
 };
 
@@ -221,30 +221,30 @@ if (window.location.pathname.includes('fansites.html')) {
             // Update member icon with same gradient as index page
             const memberIcon = document.getElementById('memberIcon');
             const gradients = {
-                'S1': 'linear-gradient(135deg, #FFB6C1, #FF69B4)',
-                'S2': 'linear-gradient(135deg, #DDA0DD, #DA70D6)',
-                'S3': 'linear-gradient(135deg, #E6E6FA, #D8BFD8)',
-                'S4': 'linear-gradient(135deg, #87CEEB, #4682B4)',
-                'S5': 'linear-gradient(135deg, #FF69B4, #FF1493)',
-                'S6': 'linear-gradient(135deg, #90EE90, #32CD32)',
-                'S7': 'linear-gradient(135deg, #F0E68C, #DAA520)',
-                'S8': 'linear-gradient(135deg, #FFD700, #FFA500)',
-                'S9': 'linear-gradient(135deg, #B0E0E6, #5F9EA0)',
-                'S10': 'linear-gradient(135deg, #AFEEEE, #48D1CC)',
-                'S11': 'linear-gradient(135deg, #FF1493, #C71585)',
-                'S12': 'linear-gradient(135deg, #98FB98, #3CB371)',
-                'S13': 'linear-gradient(135deg, #98FB98, #3CB371)',
-                'S14': 'linear-gradient(135deg, #BA55D3, #9932CC)',
-                'S15': 'linear-gradient(135deg, #8A2BE2, #9400D3)',
-                'S16': 'linear-gradient(135deg, #FFB6C1, #FF69B4)',
-                'S17': 'linear-gradient(135deg, #FFA07A, #FF7F50)',
-                'S18': 'linear-gradient(135deg, #ADD8E6, #87CEEB)',
-                'S19': 'linear-gradient(135deg, #C71585, #8B0A50)',
-                'S20': 'linear-gradient(135deg, #FA8072, #E9967A)',
-                'S21': 'linear-gradient(135deg, #FF6347, #DC143C)',
-                'S22': 'linear-gradient(135deg, #F08080, #CD5C5C)',
-                'S23': 'linear-gradient(135deg, #87CEEB, #4682B4)',
-                'S24': 'linear-gradient(135deg, #9370DB, #8A2BE2)'
+                'S1': 'linear-gradient(135deg, #22AEFF, #1C8CD1)',
+                'S2': 'linear-gradient(135deg, #9200FF, #7400CC)',
+                'S3': 'linear-gradient(135deg, #FFF800, #CCC600)',
+                'S4': 'linear-gradient(135deg, #98F21D, #7AC217)',
+                'S5': 'linear-gradient(135deg, #DB0C74, #AF0A5D)',
+                'S6': 'linear-gradient(135deg, #FC83A4, #CA6983)',
+                'S7': 'linear-gradient(135deg, #6799A0, #527A80)',
+                'S8': 'linear-gradient(135deg, #FFE3E2, #CCB6B5)',
+                'S9': 'linear-gradient(135deg, #FFC935, #CCA12A)',
+                'S10': 'linear-gradient(135deg, #FF9AD6, #CC7BAB)',
+                'S11': 'linear-gradient(135deg, #FFDE00, #CCB200)',
+                'S12': 'linear-gradient(135deg, #5974FF, #475DCC)',
+                'S13': 'linear-gradient(135deg, #FF953F, #CC7732)',
+                'S14': 'linear-gradient(135deg, #1222B5, #0E1B91)',
+                'S15': 'linear-gradient(135deg, #D51313, #AA0F0F)',
+                'S16': 'linear-gradient(135deg, #FE8E76, #CB725E)',
+                'S17': 'linear-gradient(135deg, #AC62B7, #8A4E92)',
+                'S18': 'linear-gradient(135deg, #B7F54C, #92C43D)',
+                'S19': 'linear-gradient(135deg, #52D9BB, #42AE96)',
+                'S20': 'linear-gradient(135deg, #FF428A, #CC356E)',
+                'S21': 'linear-gradient(135deg, #C7A3E0, #9F82B3)',
+                'S22': 'linear-gradient(135deg, #7BBA8D, #629571)',
+                'S23': 'linear-gradient(135deg, #CFF3FF, #A6C2CC)',
+                'S24': 'linear-gradient(135deg, #FFAB62, #CC894E)'
             };
 
             memberIcon.style.background = gradients[sNumber];
